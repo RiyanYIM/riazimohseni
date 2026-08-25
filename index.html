@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>آکادمی سبزلرن لوکس | دوره های تخصصی ریاضی و کنکور استاد محسنی</title>
+  <meta name="description" content="پلتفرم آموزش لوکس ریاضیات دبیرستان، کنکور و برنامه نویسی با متد اختصاصی استاد محسنی. ثبت نام مستقیم از تلگرام و دریافت ۶۰ درصد تخفیف ویژه.">
+  
+  <!-- Favicon / Meta -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f2ca50'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       Header / Navbar
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar">
+        <!-- Right: Brand & Nav Links in RTL -->
+        <div class="nav-right">
+          <a href="index.html" class="brand-logo" id="brandLogo">
+            <span class="brand-icon">M</span>
+            <span>Sabzlearn <span class="brand-title-accent">Luxe</span></span>
+          </a>
+
+          <ul class="nav-links" id="mainNavLinks">
+            <li><a href="index.html" class="active" id="navHome">دوره ها</a></li>
+            <li><a href="products.html" id="navProducts">همه محصولات</a></li>
+            <li><a href="contact.html" id="navContact">راه ارتباطی</a></li>
+            <li><a href="about.html" id="navAbout">درباره ما</a></li>
+          </ul>
+        </div>
+
+        <!-- Left: Cart & User Auth in RTL -->
+        <div class="nav-left">
+          <button class="cart-trigger-btn" id="headerCartBtn" aria-label="سبد خرید">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="cart-badge" style="display: none;">0</span>
+          </button>
+
+          <button class="btn-auth-gold auth-modal-trigger" id="headerAuthBtn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+              <polyline points="10 17 15 12 10 7"></polyline>
+              <line x1="15" y1="12" x2="3" y2="12"></line>
+            </svg>
+            <span>ورود به حساب کاربری</span>
+          </button>
+
+          <!-- Mobile Hamburger -->
+          <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="منوی موبایل">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       Hero Section (Stitch Exact Box Banner)
+       ======================================================================== -->
+  <section class="hero-section" id="heroSection">
+    <div class="container">
+      <div class="hero-luxe-card" id="heroCard">
+        <h1 class="hero-main-title" id="heroMainTitle">دوره های ریاضی</h1>
+        <p class="hero-sub-caption">
+          آکادمی تخصصی ریاضیات و کنکور با تدریس مفهومی استاد محسنی و تضمین ارتقای تراز
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Main Content Layout: Filter Sidebar + Courses Grid
+       ======================================================================== -->
+  <main class="academy-main-layout" id="mainAcademySection">
+    <div class="container">
+      <div class="academy-grid-wrapper">
+
+        <!-- Right Column (In RTL): Filter Sidebar -->
+        <aside class="filter-sidebar" id="filterSidebar">
+          <div class="filter-header">
+            <div class="filter-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <line x1="4" y1="6" x2="20" y2="6"></line>
+                <line x1="6" y1="12" x2="18" y2="12"></line>
+                <line x1="8" y1="18" x2="16" y2="18"></line>
+              </svg>
+              <span>فیلتر نتایج</span>
+            </div>
+            <button class="filter-reset-btn" id="resetFiltersBtn" type="button">پاک کردن</button>
+          </div>
+
+          <!-- Category Checkboxes -->
+          <div class="filter-group">
+            <span class="filter-group-title">دسته بندی</span>
+            <div class="filter-checkbox-list">
+              <label class="custom-checkbox-label">
+                <input type="checkbox" class="category-filter-checkbox" value="grade-12">
+                <span class="checkbox-box"></span>
+                <span>ریاضی دوازدهم</span>
+              </label>
+
+              <label class="custom-checkbox-label">
+                <input type="checkbox" class="category-filter-checkbox" value="grade-base">
+                <span class="checkbox-box"></span>
+                <span>ریاضی پایه</span>
+              </label>
+
+              <label class="custom-checkbox-label">
+                <input type="checkbox" class="category-filter-checkbox" value="grade-konkur">
+                <span class="checkbox-box"></span>
+                <span>ریاضی کنکور</span>
+              </label>
+
+              <label class="custom-checkbox-label">
+                <input type="checkbox" class="category-filter-checkbox" value="tech">
+                <span class="checkbox-box"></span>
+                <span>برنامه نویسی</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Toggle Switches -->
+          <div class="filter-toggle-list">
+            <label class="switch-control-item" for="filterMyCourses">
+              <span class="switch-label-text">دوره های من</span>
+              <input type="checkbox" id="filterMyCourses" class="switch-input">
+              <span class="switch-slider"></span>
+            </label>
+
+            <label class="switch-control-item" for="filterFreeOnly">
+              <span class="switch-label-text">فقط دوره های رایگان</span>
+              <input type="checkbox" id="filterFreeOnly" class="switch-input">
+              <span class="switch-slider"></span>
+            </label>
+          </div>
+
+          <!-- Direct Telegram Support Card -->
+          <div class="sidebar-telegram-card">
+            <h5>مشاوره و ثبت‌نام سریع</h5>
+            <p>سوالی دارید؟ در تلگرام مستقیماً با استاد محسنی در ارتباط باشید.</p>
+            <a href="https://t.me/riazi_mohseni_admin" target="_blank" class="btn-sidebar-tg">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+              <span>ارتباط با پشتیبان تلگرام</span>
+            </a>
+          </div>
+        </aside>
+
+        <!-- Left Column (In RTL): Course List & Search Controls -->
+        <section class="courses-content-column">
+          <!-- Courses Bar Header -->
+          <div class="courses-bar-header">
+            <div class="courses-title-stats">
+              <h2 class="courses-section-heading">همه دوره های آموزشی</h2>
+              <div class="academy-stats-pills">
+                <div class="stat-badge">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                  <span><strong>1567+</strong> دانشجو</span>
+                </div>
+                <div class="stat-badge">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                  <span><strong>6+</strong> دوره تخصصی</span>
+                </div>
+                <div class="stat-badge">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span><strong>+200</strong> ساعت آموزش</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Search & Sort Controls -->
+            <div class="courses-filter-controls">
+              <!-- Search Bar -->
+              <div class="search-input-wrapper">
+                <input type="text" id="coursesSearchInput" placeholder="جستجوی دوره یا مبحث...">
+                <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </div>
+
+              <!-- Sort Dropdown -->
+              <div class="sort-select-wrapper">
+                <span class="sort-label">مرتب سازی:</span>
+                <select id="coursesSortSelect">
+                  <option value="newest">جدید ترین</option>
+                  <option value="popular">محبوب ترین</option>
+                  <option value="price-low">ارزان ترین</option>
+                  <option value="price-high">گران ترین</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Courses Grid Container -->
+          <div class="courses-cards-grid" id="coursesGrid">
+            <!-- Dynamically populated via assets/js/main.js -->
+          </div>
+
+          <!-- Load More Button (Stitch Screen Element) -->
+          <div class="load-more-container">
+            <button class="btn-load-more" id="loadMoreCoursesBtn" onclick="window.location.href='products.html'">
+              <span>مشاهده بیشتر</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       Shopping Cart Drawer
+       ======================================================================== -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span>سبد خرید شما</span>
+      </div>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="بستن سبد خرید">✕</button>
+    </div>
+
+    <!-- Cart Items Container -->
+    <div class="cart-items-list" id="cartItemsList"></div>
+
+    <!-- Promo Code & Footer Checkout -->
+    <div class="cart-drawer-footer">
+      <div style="display: flex; gap: 8px;">
+        <input type="text" id="promoCodeInput" placeholder="کد تخفیف (مثال: LUXE20)" class="form-input" style="padding: 8px 12px; font-size: 13px;">
+        <button id="applyPromoBtn" class="btn-card-cart" style="padding: 8px 14px; white-space: nowrap;">اعمال</button>
+      </div>
+
+      <div class="cart-total-row">
+        <span>مبلغ کل:</span>
+        <span class="cart-total-price" id="cartTotalPrice">۰ تومان</span>
+      </div>
+
+      <a href="#" id="cartCheckoutTelegramBtn" class="btn-checkout-telegram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+        <span>ثبت و پرداخت سفارش در تلگرام</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       Course Quick View Modal
+       ======================================================================== -->
+  <div class="modal-overlay" id="courseQuickViewModal">
+    <div class="modal-content-box">
+      <button class="modal-close-btn" id="closeQuickViewModalBtn">✕</button>
+      <div id="quickViewModalBody"></div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Auth / Login Modal
+       ======================================================================== -->
+  <div class="modal-overlay" id="authModal">
+    <div class="modal-content-box" style="max-width: 440px;">
+      <button class="modal-close-btn" id="closeAuthModalBtn">✕</button>
+      
+      <div style="text-align: center; margin-bottom: 24px;">
+        <div class="brand-icon" style="margin: 0 auto 12px; width: 44px; height: 44px;">M</div>
+        <h3 style="color: var(--primary-gold); font-size: 20px; margin-bottom: 6px;">ورود به آکادمی سبزلرن لوکس</h3>
+        <p style="color: var(--text-muted); font-size: 13px;">شماره موبایل خود را جهت دریافت کد تایید وارد نمایید</p>
+      </div>
+
+      <form id="authForm">
+        <div class="form-group">
+          <label class="form-label" for="authPhoneInput">شماره موبایل</label>
+          <input type="tel" id="authPhoneInput" class="form-input" placeholder="۰۹۱۲۳۴۵۶۷۸۹" required dir="ltr">
+        </div>
+
+        <button type="submit" class="btn-auth-gold" style="width: 100%; justify-content: center; padding: 12px; margin-top: 8px;">
+          دریافت کد ورود پیامکی
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Footer (Exact Stitch Screen Layout)
+       ======================================================================== -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      <div class="footer-top-grid">
+        
+        <!-- Right Col: Riazi_mohseni Brand & Quote -->
+        <div class="footer-brand-col">
+          <div class="footer-brand-title">Riazi_mohseni</div>
+          <p class="footer-quote">
+            شروع هرچیزی سخته، ولی وقتی مسیر درستی رو انتخاب کنی، با خیال راحت و بدون استرس میتونی از مسیر لذت ببری.
+          </p>
+        </div>
+
+        <!-- Middle Col: Useful Links -->
+        <div class="footer-nav-col">
+          <h4>لینک های مفید</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html">درباره ما</a></li>
+            <li><a href="products.html">دوره های آموزشی</a></li>
+            <li><a href="contact.html">قوانین مقررات</a></li>
+            <li><a href="contact.html">Privacy Policy</a></li>
+            <li><a href="contact.html">تماس با ما</a></li>
+          </ul>
+        </div>
+
+        <!-- Left Col: Contact Info & Socials -->
+        <div class="footer-contact-col">
+          <h4>ارتباط با ما</h4>
+          <a href="mailto:info@mohseni.ir" class="footer-email-link">
+            <span>info@mohseni.ir</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+
+          <div class="footer-socials">
+            <!-- Instagram -->
+            <a href="https://instagram.com/riazi_mohseni" target="_blank" class="social-icon-btn" title="اینستاگرام">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+
+            <!-- Telegram -->
+            <a href="https://t.me/riazi_mohseni_admin" target="_blank" class="social-icon-btn" title="کانال تلگرام">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bottom -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          .mohseni Academy. All rights reserved. Elevating education through luxury learning experiences 2024 ©
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Native Vanilla JS, Zero Build Dependencies -->
+  <script src="./assets/js/courses-data.js"></script>
+  <script src="./assets/js/cart.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
